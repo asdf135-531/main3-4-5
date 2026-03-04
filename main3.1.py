@@ -31,7 +31,7 @@ d=direct(0,0,0)
 x = []
 y = []
 z = []
-for _ in range(10000):
+for _ in range(100):
     l,n,m=d.direct()
     x.append(l + d.x0)
     y.append(n + d.y0)

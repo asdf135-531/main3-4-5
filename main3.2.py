@@ -9,7 +9,7 @@ class direct:
         self.z0 = z0
     def direct(self):
         phi = math.pi*random.uniform(-1,1)
-        teta = math.pi*random.uniform(0, 1)
+        teta = math.acos(2*random.uniform(0, 1)-1)
         return phi,teta
     def plot(self, x, y, z):
         fig = plt.figure()
@@ -23,7 +23,7 @@ d=direct(0,0,0)
 x =[]
 y =[]
 z =[]
-for _ in range(10000):
+for _ in range(1000):
     phi,teta=d.direct()
     r=1
     x.append(d.x0+r*math.sin(teta)*math.cos(phi))
